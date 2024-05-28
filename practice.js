@@ -58,3 +58,15 @@ if (leapYearDeterminant(testYear)){
 }else {
     console.log(`${testYear} is not a leap year`);
 }
+console.log("++++++++++++++++");
+//7. Write a JavaScript program to find out if 1st January will be a Sunday between 2014 and 2050. or any other day
+function tuesdayYearlyCheck(){
+    for(let mwaka = 2014; mwaka <= 2050; mwaka++){
+        let d = new Date (mwaka, 4, 28); //Create a Date object for the 1st January of each year
+        //use the getDay() method to get the day of the week, i.e Sunday. 0 reps Sunday, 1 reps Monday, and so on
+        if (d.getDay() === 2){
+            console.log("28th May is Tuesday for the year: " + mwaka);
+        }
+    }
+}
+tuesdayYearlyCheck();
