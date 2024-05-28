@@ -46,3 +46,15 @@ function calculateAreaOfTriangle (){
     console.log(area);
 }
 calculateAreaOfTriangle();
+
+//6. Write a JavaScript program to determine whether a given year is a leap year in the Gregorian calendar. 
+function leapYearDeterminant(year){
+    return (year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0));
+}
+
+const testYear = 2000
+if (leapYearDeterminant(testYear)){
+    console.log(`${testYear} is a leap year.`);
+}else {
+    console.log(`${testYear} is not a leap year`);
+}
