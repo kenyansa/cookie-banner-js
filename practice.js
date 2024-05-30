@@ -80,3 +80,8 @@ if(today.getMonth() == 11 && today.getDate() > 25){
 
 const oneDay = 1000 * 60 * 60 * 24;
 console.log(Math.ceil((xmas.getTime() - today.getTime()) / (oneDay)) + "days left until Christmas!");
+
+//Write a JavaScript function to check if a given string is a palindrome (reads the same forwards and backwards). 
+function isPalindrome(str){
+    return str ===str.split('').reverse().join('');
+}
