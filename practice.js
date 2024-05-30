@@ -85,3 +85,7 @@ console.log(Math.ceil((xmas.getTime() - today.getTime()) / (oneDay)) + "days lef
 function isPalindrome(str){
     return str ===str.split('').reverse().join('');
 }
+
+let str = "I love you"
+const reverseString = (str) => str.split(' ').reverse().join(' ')
+console.log(reverseString(str));
