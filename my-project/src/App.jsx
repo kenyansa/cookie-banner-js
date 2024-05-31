@@ -12,9 +12,19 @@ function App() {
   const increment = () => {
     setCount (count + 1);
   }
+  const decrement = () => {
+    setCount (count - 1);
+  }
+  const reset = () => {
+    setCount (0);
+  }
 //alternatively:  const increment = () => setCount((count) => count + 1)
   const toggleEmploymentStatus = () =>{
     setIsEmployed(!isEmployed);
+  }
+
+  function handleNameChange (event){
+    setName(event.target.value)
   }
   return (
     <>
@@ -24,19 +34,30 @@ function App() {
         onClick={updateName}>
           Set Name
         </button> <br/>
-        <p className='mb-2 font-bold text-lg'>Name: {name}</p>
-
+        <p className='mb-2 font-bold text-lg'>Name: {name}<br/> +++++++++++++++++</p>
         <button className="focus:outline-none text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900"
         onClick={toggleEmploymentStatus}>
           Employment Status
         </button><br />
-        <p className='mb-2 font-bold text-lg'>Employed ?: {isEmployed ? "Yes": "No"}</p>
+        <p className='mb-2 font-bold text-lg'>Employed ?: {isEmployed ? "Yes": "No"} <br/> +++++++++++++++++</p>
 
 
         <button className="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
         onClick={increment}>
-          Count is {count}
+          Increment
         </button>
+        <button className="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
+        onClick={reset}>
+          Reset
+        </button>
+        <button className="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
+        onClick={decrement}>
+          Decrement
+        </button>
+        <p className="font-serif font-bold mb-2">Count is: {count} <br/> +++++++++++++++++</p>
+
+        <input value={name} onChange={handleNameChange}/>
+        <p>Name: {name}</p>
       </div>
     </>
   )
