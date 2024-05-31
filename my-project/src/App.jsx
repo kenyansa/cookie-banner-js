@@ -7,6 +7,7 @@ function App() {
   const [isEmployed, setIsEmployed] = useState(false)
   const [quantity, setQuantity] = useState(1)
   const [comment, setComment] = useState("")
+  const [payment, setPayment] = useState("")
 
   const updateName = () =>{
     setName("Kenyansa")
@@ -37,6 +38,9 @@ function App() {
     setComment(event.target.value);
   }
 
+  function handlePaymentChange(event){
+    setPayment(event.target.value);
+  }
   return (
     <>
       <h1 className="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl"><span className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">Better Working</span> With State.</h1>
@@ -75,6 +79,14 @@ function App() {
 
         <textarea value={comment} onChange={handleCommentChange} placeholder='Enter delivery instructions'></textarea>
         <p>Comment:{comment} <br/> +++++++++++++++++</p>
+
+        <select value={payment} onChange={handlePaymentChange}>
+          <option value="">Select an option</option>
+          <option value="Visa">Visa</option>
+          <option value="Mastercard">Mastercard</option>
+          <option value="Giftcard">Giftcard</option>
+        </select>
+        <p>Payment: {payment} </p>
       </div>
     </>
   )
