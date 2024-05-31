@@ -111,6 +111,7 @@ function App() {
           onChange={handleShippingChange} />
           Delivery
         </label>
+        <p>Shipping: {shipping} <br/> +++++++++++++++++</p>
       </div>
     </>
   )
