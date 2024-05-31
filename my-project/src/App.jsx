@@ -8,6 +8,7 @@ function App() {
   const [quantity, setQuantity] = useState(1)
   const [comment, setComment] = useState("")
   const [payment, setPayment] = useState("")
+  const [shipping, setShipping] = useState("")
 
   const updateName = () =>{
     setName("Kenyansa")
@@ -41,6 +42,12 @@ function App() {
   function handlePaymentChange(event){
     setPayment(event.target.value);
   }
+
+  function handleShippingChange(event){
+    setShipping(event.target.value);
+  }
+
+
   return (
     <>
       <h1 className="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl"><span className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">Better Working</span> With State.</h1>
@@ -86,7 +93,24 @@ function App() {
           <option value="Mastercard">Mastercard</option>
           <option value="Giftcard">Giftcard</option>
         </select>
-        <p>Payment: {payment} </p>
+        <p>Payment: {payment} <br/> +++++++++++++++++</p>
+
+        <label htmlFor="pickUp" className='m-3'>
+          <input type="radio" 
+          className='m-3'
+          value="Pick up" 
+          checked={shipping === "Pick up"}
+          onChange={handleShippingChange} />
+          Pick up
+        </label>
+        <label htmlFor="delivery" className='m-3'>
+        <input type="radio"
+          className='m-3' 
+          value="Delivery" 
+          checked={shipping === "Delivery"}
+          onChange={handleShippingChange} />
+          Delivery
+        </label>
       </div>
     </>
   )
