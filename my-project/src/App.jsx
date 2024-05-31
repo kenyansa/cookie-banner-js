@@ -26,7 +26,7 @@ function App() {
   const toggleEmploymentStatus = () =>{
     setIsEmployed(!isEmployed);
   }
-
+//onChange is an event handler, primarily used with form elements. Every time the value of input changes, it triggers a function
   function handleNameChange (event){
     setName(event.target.value)
   }
