@@ -4,7 +4,8 @@ import './App.css'
 function App() {
   const [name, setName] = useState("Guest")
   const [count, setCount] = useState(0)
-  const [isEmployed, setIsEmployed] = useState(false);
+  const [isEmployed, setIsEmployed] = useState(false)
+  const [quantity, setQuantity] = useState(1)
 
   const updateName = () =>{
     setName("Kenyansa")
@@ -25,6 +26,10 @@ function App() {
 
   function handleNameChange (event){
     setName(event.target.value)
+  }
+
+  function handleQuantityChange(event){
+    setQuantity(event.target.value);
   }
   return (
     <>
@@ -57,7 +62,10 @@ function App() {
         <p className="font-serif font-bold mb-2">Count is: {count} <br/> +++++++++++++++++</p>
 
         <input value={name} onChange={handleNameChange}/>
-        <p>Name: {name}</p>
+        <p>Name: {name} <br/> +++++++++++++++++</p>
+
+        <input value={quantity} type='number' onChange={handleQuantityChange} />
+        <p>Quantity: {quantity}</p>
       </div>
     </>
   )
