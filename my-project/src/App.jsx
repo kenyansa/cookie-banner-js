@@ -6,6 +6,7 @@ function App() {
   const [count, setCount] = useState(0)
   const [isEmployed, setIsEmployed] = useState(false)
   const [quantity, setQuantity] = useState(1)
+  const [comment, setComment] = useState("")
 
   const updateName = () =>{
     setName("Kenyansa")
@@ -31,6 +32,11 @@ function App() {
   function handleQuantityChange(event){
     setQuantity(event.target.value);
   }
+
+  function handleCommentChange(event){
+    setComment(event.target.value);
+  }
+
   return (
     <>
       <h1 className="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl"><span className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">Better Working</span> With State.</h1>
@@ -65,7 +71,10 @@ function App() {
         <p>Name: {name} <br/> +++++++++++++++++</p>
 
         <input value={quantity} type='number' onChange={handleQuantityChange} />
-        <p>Quantity: {quantity}</p>
+        <p>Quantity: {quantity} <br/> +++++++++++++++++</p>
+
+        <textarea value={comment} onChange={handleCommentChange} placeholder='Enter delivery instructions'></textarea>
+        <p>Comment:{comment} <br/> +++++++++++++++++</p>
       </div>
     </>
   )
