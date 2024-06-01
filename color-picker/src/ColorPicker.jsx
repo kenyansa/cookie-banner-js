@@ -15,7 +15,7 @@ function ColorPicker(){
         <div className="color-display p-4 border rounded-md" style={{background: color}}>
             <p>Selected color: {color}</p>
         </div>
-        <label htmlFor="selectColor" className="text-lg font-medium">Select a color:</label>
+        <label htmlFor="selectColor" className="text-lg font-medium">Select a color from below:</label>
         <input 
         type="color" 
         value={color} 
