@@ -47,9 +47,9 @@ function App() {
                 <option value="price-asc">Price: Low to High</option>
                 <option value="price-desc">Price: High to Low</option>
             </select>
-            <div className="product-list">
+            <div className="product-list flex justify-center items-center mt-2.5 mb-5">
                 {filteredProducts.map(product => (
-                    <div key={product.id} className="product-item">
+                    <div key={product.id} className="product-item px-5 pb-5 items-center justify-between rounded-lg">
                         <img src={product.image} alt={product.name} />
                         <h2>{product.name}</h2>
                         <p>${product.price}</p>
