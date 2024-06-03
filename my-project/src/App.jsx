@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import ArrayState from './ArrayState'
 
 function App() {
   const [name, setName] = useState("Guest")
@@ -113,6 +114,7 @@ function App() {
         </label>
         <p>Shipping: {shipping} <br/> +++++++++++++++++</p>
       </div>
+      <ArrayState />
     </>
   )
 }
