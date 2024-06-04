@@ -2,7 +2,7 @@ import { useState } from "react";
 
 function ArrayState(){
 
-    const [foods, setFoods] = useState(["Apple", "Orange", "Banana"]);
+    const [foods, setFoods] = useState(["Apple", "Orange", "Banana", "Avocado"]);
 
     function  handleAddFood(){
         const newFood = document.getElementById("foodInput").value;
